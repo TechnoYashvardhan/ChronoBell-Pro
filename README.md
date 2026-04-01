@@ -41,7 +41,12 @@ Modern. Powerful. Beautiful.
 
 ---
 ## Releases
-- Download Software - https://www.mediafire.com/file/a0uc70afeonldvd/ChronoBell_Pro.zip/file
+- All Releases - https://www.mediafire.com/file/a0uc70afeonldvd/ChronoBell_Pro.zip/file
+- Windows - https://www.mediafire.com/file/o1z9kixbvyv07e2/ChronoBell-Pro-Setup-1.0.0.exe/file
+- Mac(Intel Chip) - https://www.mediafire.com/file/duejjm5nvrmjiip/ChronoBell-Pro-1.0.0.dmg/file
+- Linux(x84_64) - https://www.mediafire.com/file/joqex42vsrkbwp0/ChronoBell-Pro-1.0.0-x86_64.AppImage/file
+- Linux(arm64) - https://www.mediafire.com/file/av3taj9u4k0yazh/ChronoBell-Pro-1.0.0-arm64.AppImage/file
+
 - Download Bells - https://www.mediafire.com/file/3sp74b3wrfjr6bm/sounds.zip/file
 ### How To Install
 1. Extract the ZIP

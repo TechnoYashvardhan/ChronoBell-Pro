@@ -1,0 +1,196 @@
+================================================================================
+                       CHRONOBELL PRO — COMMERCIAL LICENSE AGREEMENT
+================================================================================
+
+Copyright (c) 2026 Yashvardhan Tiwari. All Rights Reserved.
+
+Contact : yashvardhantechno@gmail.com
+Product : ChronoBell Pro
+Price   : Rs.5,499 per license / per year
+
+PLEASE READ THIS LICENSE AGREEMENT CAREFULLY BEFORE INSTALLING OR USING
+CHRONOBELL PRO. BY INSTALLING, COPYING, OR OTHERWISE USING THIS SOFTWARE,
+YOU AGREE TO BE BOUND BY THE TERMS OF THIS AGREEMENT. IF YOU DO NOT AGREE,
+DO NOT INSTALL OR USE THIS SOFTWARE.
+
+--------------------------------------------------------------------------------
+1. DEFINITIONS
+--------------------------------------------------------------------------------
+
+  "Software"       — ChronoBell Pro, including all files, data, updates, and
+                     accompanying documentation.
+  "License"        — The annual subscription granting you the right to use
+                     the Software under the terms below.
+  "Licensee"       — The individual or institution that has purchased a valid
+                     License.
+  "Author"         — Yashvardhan Tiwari, the sole developer and owner of
+                     ChronoBell Pro.
+  "Activation"     — The process of validating a purchased License for use
+                     on an authorized device or institution.
+
+--------------------------------------------------------------------------------
+2. LICENSE GRANT
+--------------------------------------------------------------------------------
+
+Upon payment of the annual license fee of Rs.5,499 (Indian Rupees Five Thousand
+Four Hundred and Ninety Nine), the Author grants the Licensee a limited,
+non-exclusive, non-transferable, revocable license to:
+
+  - Install and use ChronoBell Pro on ONE (1) primary device or within ONE (1)
+    institution/campus for the duration of the paid license period.
+  - Use the Software for personal, educational, or internal institutional
+    purposes (schools, offices, factories, religious institutions, etc.).
+  - Access any updates or patches released during the active license period.
+
+--------------------------------------------------------------------------------
+3. LICENSE PERIOD & RENEWAL
+--------------------------------------------------------------------------------
+
+  - This License is valid for TWELVE (12) MONTHS from the date of purchase.
+  - Upon expiry, the Software may cease to function or restrict access until
+    the License is renewed.
+  - Renewal is subject to the pricing in effect at the time of renewal.
+  - The Author reserves the right to change pricing with reasonable notice.
+
+--------------------------------------------------------------------------------
+4. RESTRICTIONS
+--------------------------------------------------------------------------------
+
+The Licensee MAY NOT, under any circumstances:
+
+  a) Copy, distribute, share, or resell the Software or License to any
+     third party without explicit written permission from the Author.
+
+  b) Reverse engineer, decompile, disassemble, or attempt to derive the
+     source code of the Software.
+
+  c) Modify, adapt, translate, or create derivative works based on the
+     Software.
+
+  d) Remove, alter, or obscure any copyright notices, branding, watermarks,
+     or proprietary notices within the Software.
+
+  e) Use a single License across multiple campuses, branches, or institutions
+     without purchasing additional licenses.
+
+  f) Share, lend, sublicense, or transfer the License to another individual
+     or entity.
+
+  g) Use the Software after the License has expired without renewal.
+
+  h) Claim ownership or authorship of the Software or any part of it.
+
+  i) Use the Software for any unlawful purpose.
+
+--------------------------------------------------------------------------------
+5. MULTI-SITE / BULK LICENSING
+--------------------------------------------------------------------------------
+
+If you wish to deploy ChronoBell Pro across multiple branches, campuses, or
+devices beyond the scope of a single License, please contact the Author for
+bulk/enterprise pricing:
+
+  Email: yashvardhantechno@gmail.com
+
+--------------------------------------------------------------------------------
+6. BELL SOUNDS PACK
+--------------------------------------------------------------------------------
+
+The Bell Sounds Pack distributed with ChronoBell Pro is proprietary content
+licensed exclusively for use within the Software. You may not extract,
+redistribute, sell, or repurpose the audio files outside of ChronoBell Pro.
+
+--------------------------------------------------------------------------------
+7. UPDATES & SUPPORT
+--------------------------------------------------------------------------------
+
+  - Active License holders are entitled to all software updates released
+    during their license period at no additional cost.
+  - Support is provided on a best-effort basis via email at
+    yashvardhantechno@gmail.com.
+  - The Author does not guarantee response times or resolution of all issues.
+
+--------------------------------------------------------------------------------
+8. REFUND POLICY
+--------------------------------------------------------------------------------
+
+  - Refund requests must be submitted within 7 (seven) days of purchase.
+  - Refunds will not be issued after 7 days or if the License has been
+    activated and the Software has been in use.
+  - To request a refund, contact: yashvardhantechno@gmail.com
+
+--------------------------------------------------------------------------------
+9. DISCLAIMER OF WARRANTIES
+--------------------------------------------------------------------------------
+
+THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
+
+THE AUTHOR DOES NOT WARRANT THAT THE SOFTWARE WILL BE UNINTERRUPTED,
+ERROR-FREE, OR FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS. THE LICENSEE
+ASSUMES ALL RISK FOR THE USE OF THE SOFTWARE.
+
+--------------------------------------------------------------------------------
+10. LIMITATION OF LIABILITY
+--------------------------------------------------------------------------------
+
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL THE
+AUTHOR BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR
+PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF REVENUE, LOSS OF DATA,
+OR BUSINESS INTERRUPTION, ARISING FROM THE USE OF OR INABILITY TO USE THE
+SOFTWARE, EVEN IF THE AUTHOR HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH
+DAMAGES.
+
+THE AUTHOR'S TOTAL LIABILITY TO THE LICENSEE SHALL NOT EXCEED THE AMOUNT PAID
+BY THE LICENSEE FOR THE CURRENT LICENSE PERIOD (Rs.5,499).
+
+--------------------------------------------------------------------------------
+11. TERMINATION
+--------------------------------------------------------------------------------
+
+This License will terminate automatically and without notice if the Licensee:
+
+  - Fails to renew the annual subscription upon expiry.
+  - Breaches any term of this Agreement.
+  - Engages in unauthorized distribution or reverse engineering of the Software.
+
+Upon termination, the Licensee must immediately cease all use of the Software
+and delete all copies in their possession.
+
+The Author reserves the right to disable or deactivate licenses found to be
+in violation of this Agreement.
+
+--------------------------------------------------------------------------------
+12. GOVERNING LAW & DISPUTE RESOLUTION
+--------------------------------------------------------------------------------
+
+This Agreement shall be governed by and construed in accordance with the laws
+of the Republic of India. Any disputes arising out of or in connection with
+this Agreement shall be subject to the exclusive jurisdiction of the competent
+courts of India.
+
+--------------------------------------------------------------------------------
+13. ENTIRE AGREEMENT
+--------------------------------------------------------------------------------
+
+This License constitutes the entire agreement between the Licensee and the
+Author with respect to the Software and supersedes all prior understandings,
+agreements, representations, or warranties.
+
+The Author reserves the right to update these terms at any time. Continued
+use of the Software after notification of changes constitutes acceptance of
+the revised terms.
+
+--------------------------------------------------------------------------------
+
+For licensing inquiries, support, or bulk purchases:
+
+  Email: yashvardhantechno@gmail.com
+
+Thank you for purchasing ChronoBell Pro.
+Ring Smarter, Not Harder.
+
+================================================================================
+              (c) 2026 Yashvardhan Tiwari — All Rights Reserved
+================================================================================

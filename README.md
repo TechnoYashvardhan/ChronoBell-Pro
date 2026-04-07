@@ -1,211 +1,179 @@
 # 🔔 ChronoBell Pro
 
-**Professional Automatic Bell Scheduling System**
+> **Professional Automatic Bell Scheduling System**
+> Modern. Powerful. Beautiful.
 
-Modern. Powerful. Beautiful.
+![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-blue)
+![Version](https://img.shields.io/badge/version-1.0.0-brightgreen)
+![License](https://img.shields.io/badge/license-Commercial-orange)
+
+---
+
+## 📥 Download
+
+| Platform | Link |
+|---|---|
+| 🪟 **Windows** | [ChronoBell-Pro-Setup-1.0.0.exe](https://www.mediafire.com/file/o1z9kixbvyv07e2/ChronoBell-Pro-Setup-1.0.0.exe/file) |
+| 🍎 **macOS** (Intel) | [ChronoBell-Pro-1.0.0.dmg](https://www.mediafire.com/file/duejjm5nvrmjiip/ChronoBell-Pro-1.0.0.dmg/file) |
+| 🐧 **Linux** (x86_64) | [ChronoBell-Pro-1.0.0-x86_64.AppImage](https://www.mediafire.com/file/joqex42vsrkbwp0/ChronoBell-Pro-1.0.0-x86_64.AppImage/file) |
+| 🐧 **Linux** (arm64) | [ChronoBell-Pro-1.0.0-arm64.AppImage](https://www.mediafire.com/file/av3taj9u4k0yazh/ChronoBell-Pro-1.0.0-arm64.AppImage/file) |
+| 🔔 **Bell Sounds Pack** | [sounds.zip](https://www.mediafire.com/file/3sp74b3wrfjr6bm/sounds.zip/file) |
 
 ---
 
 ## ✨ Features
 
-### 🎯 Core Features
-- **Automated Scheduling** - Set bells to ring at specific times
-- **Quick Play Buttons** - Instant audio playback for prayers, anthems, emergencies
-- **Beautiful UI** - Stunning neon cyberpunk interface
-- **Offline First** - Works without internet connection
-- **System Tray** - Runs quietly in background
-- **Cross-Platform** - Windows & Mac native apps
+- 🕐 **Automated Scheduling** — Set bells to ring at exact times on specific days
+- ⚡ **Quick Play Buttons** — Instant one-click playback for prayers, anthems, emergencies
+- 📋 **Schedule Presets** — Load ready-made timetables for Summer, Winter, Exams, Sports Day and more
+- 🎨 **Beautiful UI** — Neon cyberpunk interface with smooth animations
+- 📴 **Offline First** — Works entirely without internet
+- 🖥️ **System Tray** — Runs quietly in the background
+- 🔊 **Multi-format Audio** — Supports MP3, WAV, OGG, M4A
 
-### 🎨 Interface Highlights
-- Modern frameless design
-- Smooth animations
-- Neon glow effects
-- Intuitive navigation
-- Professional aesthetics
+---
+
+## 🖼️ Screenshots
+
+> *(Add screenshots of your app here)*
 
 ---
 
 ## 🚀 Installation
 
 ### Windows
-1. Download `ChronoBell-Pro-Setup-1.0.0.exe`
-2. Run the installer
-3. Follow the setup wizard
-4. Launch from desktop or start menu
+1. Download the `.exe` installer from the link above
+2. Run it and follow the setup wizard
+3. Launch ChronoBell Pro from the desktop or Start Menu
 
-### Mac
-1. Download `ChronoBell-Pro-1.0.0.dmg`
-2. Open the DMG file
-3. Drag ChronoBell Pro to Applications
-4. Open from Applications folder
+### macOS
+1. Download the `.dmg` file
+2. Open it and drag **ChronoBell Pro** into your Applications folder
+3. Open from Applications — if macOS blocks it, go to **System Settings → Privacy & Security** and click **Open Anyway**
 
----
-## Releases
-- All Releases - https://www.mediafire.com/file/a0uc70afeonldvd/ChronoBell_Pro.zip/file
-- Windows - https://www.mediafire.com/file/o1z9kixbvyv07e2/ChronoBell-Pro-Setup-1.0.0.exe/file
-- Mac(Intel Chip) - https://www.mediafire.com/file/duejjm5nvrmjiip/ChronoBell-Pro-1.0.0.dmg/file
-- Linux(x84_64) - https://www.mediafire.com/file/joqex42vsrkbwp0/ChronoBell-Pro-1.0.0-x86_64.AppImage/file
-- Linux(arm64) - https://www.mediafire.com/file/av3taj9u4k0yazh/ChronoBell-Pro-1.0.0-arm64.AppImage/file
+### Linux
+1. Download the `.AppImage` for your architecture
+2. Make it executable:
+   ```bash
+   chmod +x ChronoBell-Pro-1.0.0-x86_64.AppImage
+   ```
+3. Run it:
+   ```bash
+   ./ChronoBell-Pro-1.0.0-x86_64.AppImage
+   ```
 
-- Download Bells - https://www.mediafire.com/file/3sp74b3wrfjr6bm/sounds.zip/file
-### How To Install
-1. Extract the ZIP
-2. Open 'Release' folder inside the 'ChronoBell Pro' folder
-3. There are the installers for mac and windows both
+### Bell Sounds Pack
+1. Download `sounds.zip` from the link above
+2. Extract it — you'll get a `Bells/` folder
+3. Place the `Bells/` folder inside your ChronoBell Pro installation directory
+4. Browse to those files when setting up schedules or quick play buttons
+
 ---
 
 ## 📖 Quick Start
 
-### Adding a Schedule
-
-1. Click **Schedules** in sidebar
+### Adding a Bell Schedule
+1. Click **Schedules** in the sidebar
 2. Click **+ Add Schedule**
-3. Fill in:
-   - **Label**: "Morning Bell" (optional)
-   - **Time**: Select the time
-   - **Sound File**: Browse to your audio file
-   - **Days**: Select which days to ring
+3. Fill in the Label, Time, Sound File, and Days
 4. Click **Save Schedule**
 
-Done! The bell will ring automatically.
+The bell will now ring automatically at that time every selected day.
 
-### Creating Quick Play Buttons
+### Using Presets
+1. Click **Presets** in the sidebar
+2. Choose from Summer, Winter, Exam 1, Exam 2, Half Day, or Sports Day
+3. Click **Load Preset** — it will populate a full timetable instantly
 
-1. Click **Quick Play** in sidebar
+### Quick Play Buttons
+1. Click **Quick Play** in the sidebar
 2. Click **+ Add Button**
-3. Enter:
-   - **Label**: "Morning Prayer"
-   - **Sound File**: Browse to audio
-   - **Color**: Pick your favorite
-4. Click **Save Button**
-
-Now click the button anytime to play instantly!
+3. Assign a label, sound file, and color
+4. Click the button anytime for instant playback
 
 ---
 
-## 🎵 Supported Audio Formats
+## 🎯 Built For
 
-- ✅ MP3 (.mp3)
-- ✅ WAV (.wav)
-- ✅ OGG (.ogg)
-- ✅ M4A (.m4a)
-
-**Recommended**: Use MP3 for best compatibility
-
----
-
-## ⚙️ Settings
-
-### Auto Start
-Launch ChronoBell when your computer starts
-
-### Minimize to Tray
-Keep running in background when you close the window
-
-### Notifications
-Get desktop alerts when bells ring
+| Sector | Example Use |
+|---|---|
+| 🏫 Schools & Colleges | Period bells, assembly, lunch |
+| 🏢 Offices & Factories | Shift start/end, break time |
+| 🕌 Religious Institutions | Prayer times, events |
+| 🏋️ Gyms & Training Centers | Session timers |
+| 🏛️ Government Buildings | Announcements, schedules |
 
 ---
 
-## 💡 Tips & Tricks
+## ⚙️ System Requirements
 
-1. **Test First** - Use Quick Play to test sounds before scheduling
-2. **Organize Files** - Keep audio files in one folder
-3. **Short Clips** - Use 5-10 second files for bells
-4. **Clear Names** - Label schedules clearly (e.g., "Lunch Bell")
-5. **Backup** - Your data is saved in the app's data folder
+| | Minimum | Recommended |
+|---|---|---|
+| **OS** | Windows 10 / macOS 10.13 / Linux | Latest version |
+| **RAM** | 4 GB | 8 GB+ |
+| **Storage** | 500 MB | 1 GB+ |
+| **Audio** | Any sound output | Amplified speakers |
 
 ---
 
 ## 🆘 Troubleshooting
 
-### Bell didn't ring?
-- ✓ Check if schedule is enabled
-- ✓ Verify the time is correct
-- ✓ Make sure today's day is selected
-- ✓ Ensure computer wasn't sleeping
+**Bell didn't ring?**
+- Check the schedule is enabled (not paused)
+- Verify the correct days are selected
+- Make sure the computer wasn't sleeping at the scheduled time
 
-### Audio not playing?
-- ✓ Check volume settings
-- ✓ Verify audio file exists
-- ✓ Test with Quick Play button
-- ✓ Try a different audio format
+**Audio not playing?**
+- Check your system volume
+- Verify the audio file path is correct
+- Use Quick Play to test the file first
+- Try converting to MP3 if another format isn't working
 
-### App won't start?
-- **Windows**: Run as Administrator
-- **Mac**: Check Security & Privacy settings
-- Reinstall if needed
+**App won't open on macOS?**
+- Go to **System Settings → Privacy & Security → Open Anyway**
 
----
-
-## 🎯 Use Cases
-
-Perfect for:
-- 🏫 Schools & Colleges
-- 🏢 Offices & Factories
-- 🕌 Religious Institutions
-- 🏋️ Gyms & Sports Centers
-- 🎓 Training Centers
-- 🏛️ Government Buildings
+**App won't open on Windows?**
+- Try **Run as Administrator**
 
 ---
 
-## 📊 System Requirements
+## 🔐 Privacy
 
-### Minimum
-- **OS**: Windows 10+ or macOS 10.13+
-- **RAM**: 4 GB
-- **Storage**: 500 MB free space
-- **Audio**: Sound card/speakers
-
-### Recommended
-- **RAM**: 8 GB+
-- **Storage**: 1 GB free space
-- **Audio**: Amplified speakers for large areas
+- ✅ No internet connection required
+- ✅ All data stored locally on your device
+- ✅ No telemetry, tracking, or analytics
+- ✅ Your audio files never leave your computer
 
 ---
 
-## 🔐 Privacy & Security
+## 📬 Support & Contact
 
-- ✅ No data sent to internet
-- ✅ All data stored locally
-- ✅ No tracking or analytics
-- ✅ user account required
-- ✅ Your files stay on your computer
+Have a bug to report, a feature request, or just need help?
 
----
+📧 **Email:** [yashvardhantechno@gmail.com](mailto:yashvardhantechno@gmail.com)
 
-
----
-
-## 🎉 What's New
-
-### Version 1.0.0
-- Initial release
-- Bell scheduling
-- Quick play buttons
-- Modern UI
-- System tray support
-- Cross-platform
+Feel free to open an **Issue** on this repository as well.
 
 ---
 
 ## 📜 License
 
-Commercial software. Licensed per installation.
-
-See LICENSE.txt for full terms.
+Commercial software. Licensed per installation. See `LICENSE.txt` for full terms.
 
 ---
 
-## 🌟 Thank You!
+## 🎉 Changelog
 
-Thank you for choosing ChronoBell Pro!
-
-We're committed to providing the best automated bell system.
-
-**Made with ❤️ for professionals everywhere**
+### v1.0.0 — Initial Release
+- Automated bell scheduling
+- Quick play buttons
+- Schedule presets (Summer, Winter, Exam, Half Day, Sports Day)
+- Modern neon UI
+- System tray support
+- Windows, macOS & Linux builds
 
 ---
 
-**ChronoBell Pro** - Ring Smarter, Not Harder 🔔
+**ChronoBell Pro** — *Ring Smarter, Not Harder* 🔔
+
+**Made with ❤️ by Yashvardhan**

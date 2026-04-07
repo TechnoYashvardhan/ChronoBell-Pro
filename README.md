@@ -35,7 +35,11 @@
 
 ## 🖼️ Screenshots
 
-> *(Add screenshots of your app here)*
+<img width="1552" height="1012" alt="Screenshot 2026-04-07 at 8 13 19 AM" src="https://github.com/user-attachments/assets/ca5d6a61-8e67-4e04-ad26-124d4b81f684" />
+<img width="1552" height="1012" alt="Screenshot 2026-04-07 at 8 13 09 AM" src="https://github.com/user-attachments/assets/fe09fce1-ea96-417d-bb1e-2247344ccd43" />
+<img width="1552" height="1012" alt="Screenshot 2026-04-07 at 8 12 53 AM" src="https://github.com/user-attachments/assets/b8d2b368-7703-4aa5-a0d7-1329e167b16d" />
+<img width="1552" height="1012" alt="Screenshot 2026-04-07 at 8 12 05 AM" src="https://github.com/user-attachments/assets/a4bae6fc-5ae9-4011-b9f1-f4962acc73b1" />
+<img width="1440" height="900" alt="Screenshot 2026-04-07 at 8 11 33 AM" src="https://github.com/user-attachments/assets/0f3355c0-bede-493a-a401-311d44c92b8c" />
 
 ---
 

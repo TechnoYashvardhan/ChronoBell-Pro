@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChronoBell Pro — Professional Bell Scheduling System</title>
+  <meta name="description"
+    content="ChronoBell Pro is the professional automatic bell scheduling system for schools, offices, and institutions. Beautiful UI, offline-first, cross-platform.">
+
+  <!-- SEO & Social Meta Tags -->
+  <meta property="og:title" content="ChronoBell Pro — Professional Bell Scheduling System">
+  <meta property="og:description"
+    content="ChronoBell Pro is the professional automatic bell scheduling system for schools, offices, and institutions. Beautiful UI, offline-first, cross-platform.">
+  <meta property="og:image" content="https://chronobell-pro.netlify.app/screenshots/hero.png">
+  <meta property="og:url" content="https://chronobell-pro.netlify.app">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ChronoBell Pro — Professional Bell Scheduling System">
+  <meta name="twitter:description"
+    content="ChronoBell Pro is the professional automatic bell scheduling system for schools, offices, and institutions.">
+  <meta name="twitter:image" content="https://chronobell-pro.netlify.app/screenshots/hero.png">
+
+  <!-- Icons Library -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;600&family=Instrument+Serif:ital@0;1&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- DOWNLOAD MODAL -->
+  <div class="dl-modal-overlay" id="dlModal">
+    <div class="dl-modal">
+      <button class="dl-modal-close" onclick="closeDlModal()">✕</button>
+      <span class="dl-modal-icon" id="dlModalIcon">⬇</span>
+      <div class="dl-modal-title" id="dlModalTitle">Starting Download…</div>
+      <div class="dl-modal-sub" id="dlModalSub">Your file is opening in a new tab. Scroll down to get in touch if you
+        need help with installation.</div>
+      <div class="dl-modal-bar">
+        <div class="dl-modal-bar-fill" id="dlBarFill"></div>
+      </div>
+      <div class="dl-modal-redirect">
+        If it didn't open, <a id="dlDirectLink" href="#" target="_blank">click here</a>.
+      </div>
+    </div>
+  </div>
+
+  <!-- CUSTOM CURSOR -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ═══════════════════════════════════════════
+     NAV
+════════════════════════════════════════════ -->
+  <nav id="navbar">
+    <a href="#" class="nav-logo">
+      <div class="nav-logo-icon"><img src="icon.svg" alt="icon"></div>
+      <span class="nav-logo-text">ChronoBell Pro</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#features">Features</a></li>
+      <li><a href="#screenshots">Screenshots</a></li>
+      <li><a href="#themes">Themes</a></li>
+      <li><a href="#download">Download</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact" class="nav-cta">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════
+     HERO
+════════════════════════════════════════════ -->
+  <div class="hero">
+    <div class="hero-grid"></div>
+    <div class="hero-blob hero-blob-1"></div>
+    <div class="hero-blob hero-blob-2"></div>
+    <div class="hero-blob hero-blob-3"></div>
+
+    <div class="hero-content">
+
+      <h1 class="hero-title">
+        The Bell that<br><em>Never Misses</em>
+      </h1>
+
+      <p class="hero-sub">
+        ChronoBell Pro is the professional automatic bell scheduling system built for schools, offices, and
+        institutions. Precision timing. Beautiful interface. Works offline.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#download" class="btn-primary">
+          ⬇ Download Free &nbsp;·&nbsp; Windows & Mac
+        </a>
+        <a href="#features" class="btn-outline">
+          ✦ Explore Features
+        </a>
+      </div>
+    </div>
+
+    <!-- App mockup screenshot — put screenshot in /screenshots/hero.png -->
+    <div class="hero-mockup" style="width:100%; max-width: 900px;">
+      <div class="mockup-frame">
+        <div class="mockup-bar">
+          <div class="mockup-dot"></div>
+          <div class="mockup-dot"></div>
+          <div class="mockup-dot"></div>
+          <div class="mockup-url">ChronoBell Pro — Schedule Manager</div>
+        </div>
+        <div class="mockup-screenshot">
+          <img src="screenshots/hero.png" alt="ChronoBell Pro app screenshot"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+          <div class="no-img" style="display:none">
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+              <rect x="3" y="3" width="18" height="18" rx="2" />
+              <circle cx="8.5" cy="8.5" r="1.5" />
+              <polyline points="21 15 16 10 5 21" />
+            </svg>
+            <span>Place <code style="background:rgba(255,255,255,.05);padding:2px 6px;border-radius:4px">hero.png</code>
+              in <code
+                style="background:rgba(255,255,255,.05);padding:2px 6px;border-radius:4px">/screenshots/</code></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+     STATS
+════════════════════════════════════════════ -->
+  <div class="stats-bar">
+    <div class="stat-item reveal">
+      <span class="stat-num" data-target="10">0</span>
+      <div class="stat-label">UI Themes</div>
+    </div>
+    <div class="stat-sep"></div>
+    <div class="stat-item reveal reveal-delay-1">
+      <span class="stat-num">∞</span>
+      <div class="stat-label">Schedules</div>
+    </div>
+    <div class="stat-sep"></div>
+    <div class="stat-item reveal reveal-delay-2">
+      <span class="stat-num">4</span>
+      <div class="stat-label">Audio Formats</div>
+    </div>
+    <div class="stat-sep"></div>
+    <div class="stat-item reveal reveal-delay-3">
+      <span class="stat-num">3</span>
+      <div class="stat-label">Platforms</div>
+    </div>
+    <div class="stat-sep"></div>
+    <div class="stat-item reveal reveal-delay-4">
+      <span class="stat-num">100%</span>
+      <div class="stat-label">Offline-First</div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+     FEATURES
+════════════════════════════════════════════ -->
+  <section id="features">
+    <div class="features-header">
+
+      <h2 class="section-title reveal reveal-delay-1">Everything a school needs,<br>nothing it doesn't.</h2>
+      <p class="section-sub reveal reveal-delay-2">Built from the ground up for institutional bell management. Every
+        feature is deliberate, every interaction is smooth.</p>
+    </div>
+
+    <div class="features-grid">
+
+      <div class="feature-card reveal" style="--card-accent: var(--teal);">
+        <div class="feature-icon" style="--icon-bg: rgba(94,234,212,.1); --icon-glow: rgba(94,234,212,.15);"><svg
+            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-clock-icon lucide-clock">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M12 6v6l4 2" />
+          </svg></div>
+        <div class="feature-name">Automated Scheduling</div>
+        <div class="feature-desc">Set bells to ring at exact times down to the minute. Configure days of the week, skip
+          holidays, and let ChronoBell handle the rest — completely automatically.</div>
+        <span class="feature-tag">Core</span>
+      </div>
+
+      <div class="feature-card reveal reveal-delay-1" style="--card-accent: var(--sky);">
+        <div class="feature-icon" style="--icon-bg: rgba(56,189,248,.1); --icon-glow: rgba(56,189,248,.15);"><svg
+            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-zap-icon lucide-zap">
+            <path
+              d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z" />
+          </svg></div>
+        <div class="feature-name">Quick Play Buttons</div>
+        <div class="feature-desc">Create one-tap buttons for prayers, anthems, announcements, or emergency alarms.
+          Assign any audio, any color. Play instantly with a single click.</div>
+        <span class="feature-tag">Instant</span>
+      </div>
+
+      <div class="feature-card reveal reveal-delay-2" style="--card-accent: var(--violet);">
+        <div class="feature-icon" style="--icon-bg: rgba(167,139,250,.1); --icon-glow: rgba(167,139,250,.15);"><svg
+            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-palette-icon lucide-palette">
+            <path
+              d="M12 22a1 1 0 0 1 0-20 10 9 0 0 1 10 9 5 5 0 0 1-5 5h-2.25a1.75 1.75 0 0 0-1.4 2.8l.3.4a1.75 1.75 0 0 1-1.4 2.8z" />
+            <circle cx="13.5" cy="6.5" r=".5" fill="currentColor" />
+            <circle cx="17.5" cy="10.5" r=".5" fill="currentColor" />
+            <circle cx="6.5" cy="12.5" r=".5" fill="currentColor" />
+            <circle cx="8.5" cy="7.5" r=".5" fill="currentColor" />
+          </svg></div>
+        <div class="feature-name">10 Beautiful Themes</div>
+        <div class="feature-desc">Switch between Dark, Light, Fire, Earth, Frost, Water, Space, Neon, Forest, and Sunset
+          themes — each with unique particle animations, balanced color palettes, and glow effects.</div>
+        <span class="feature-tag">Aesthetic</span>
+      </div>
+
+      <div class="feature-card reveal large" style="--card-accent: var(--amber);">
+        <div class="feature-icon" style="--icon-bg: rgba(251,191,36,.1); --icon-glow: rgba(251,191,36,.15);"><svg
+            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-satellite-dish-icon lucide-satellite-dish">
+            <path d="M4 10a7.31 7.31 0 0 0 10 10Z" />
+            <path d="m9 15 3-3" />
+            <path d="M17 13a6 6 0 0 0-6-6" />
+            <path d="M21 13A10 10 0 0 0 11 3" />
+          </svg></div>
+        <div class="feature-name">100% Offline First</div>
+        <div class="feature-desc">ChronoBell Pro stores everything locally. No internet required to run schedules, play
+          audio, or manage your setup. Your institution runs even when the network doesn't. Data is stored in a local
+          SQLite database that survives restarts and power cuts.</div>
+        <div style="display:flex;gap:10px;margin-top:20px;flex-wrap:wrap;">
+          <span
+            style="font-family:'JetBrains Mono',monospace;font-size:12px;background:rgba(251,191,36,.08);border:1px solid rgba(251,191,36,.2);color:#fbbf24;padding:4px 12px;border-radius:6px;">SQLite
+            Storage</span>
+          <span
+            style="font-family:'JetBrains Mono',monospace;font-size:12px;background:rgba(251,191,36,.08);border:1px solid rgba(251,191,36,.2);color:#fbbf24;padding:4px 12px;border-radius:6px;">No
+            Cloud Required</span>
+          <span
+            style="font-family:'JetBrains Mono',monospace;font-size:12px;background:rgba(251,191,36,.08);border:1px solid rgba(251,191,36,.2);color:#fbbf24;padding:4px 12px;border-radius:6px;">Auto
+            Backup</span>
+        </div>
+      </div>
+
+      <div class="feature-card reveal" style="--card-accent: var(--rose);">
+        <div class="feature-icon" style="--icon-bg: rgba(251,113,133,.1); --icon-glow: rgba(251,113,133,.15);"><svg
+            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-bell-off-icon lucide-bell-off">
+            <path d="M10.268 21a2 2 0 0 0 3.464 0" />
+            <path d="M17 17H4a1 1 0 0 1-.74-1.673C4.59 13.956 6 12.499 6 8a6 6 0 0 1 .258-1.742" />
+            <path d="m2 2 20 20" />
+            <path d="M8.668 3.01A6 6 0 0 1 18 8c0 2.687.77 4.653 1.707 6.05" />
+          </svg></div>
+        <div class="feature-name">System Tray</div>
+        <div class="feature-desc">ChronoBell runs silently in the background. Minimize to tray, keep scheduling active
+          without a visible window — it just works.</div>
+      </div>
+
+      <div class="feature-card reveal reveal-delay-1" style="--card-accent: var(--teal);">
+        <div class="feature-icon" style="--icon-bg: rgba(94,234,212,.1); --icon-glow: rgba(94,234,212,.15);"><svg
+            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-monitor-icon lucide-monitor">
+            <rect width="20" height="14" x="2" y="3" rx="2" />
+            <line x1="8" x2="16" y1="21" y2="21" />
+            <line x1="12" x2="12" y1="17" y2="21" />
+          </svg></div>
+        <div class="feature-name">Cross-Platform Native</div>
+        <div class="feature-desc">Native Electron app for Windows, macOS, and Linux. Feels like a real desktop
+          application — not a web wrapper. Installer included for every platform.</div>
+      </div>
+
+      <div class="feature-card reveal reveal-delay-2" style="--card-accent: var(--sky);">
+        <div class="feature-icon" style="--icon-bg: rgba(56,189,248,.1); --icon-glow: rgba(56,189,248,.15);"><svg
+            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-music-icon lucide-music">
+            <path d="M9 18V5l12-2v13" />
+            <circle cx="6" cy="18" r="3" />
+            <circle cx="18" cy="16" r="3" />
+          </svg></div>
+        <div class="feature-name">Any Audio File</div>
+        <div class="feature-desc">MP3, WAV, OGG, M4A — if it's audio, ChronoBell plays it. Use school bells, prayer
+          calls, national anthems, or any custom sound.</div>
+      </div>
+
+      <div class="feature-card reveal reveal-delay-3" style="--card-accent: var(--violet);">
+        <div class="feature-icon" style="--icon-bg: rgba(167,139,250,.1); --icon-glow: rgba(167,139,250,.15);"><svg
+            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-bell-icon lucide-bell">
+            <path d="M10.268 21a2 2 0 0 0 3.464 0" />
+            <path
+              d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326" />
+          </svg></div>
+        <div class="feature-name">Animated Bell Alerts</div>
+        <div class="feature-desc">Schedule cards feature live animated bell icons with ripple rings. You can visually
+          tell when a schedule is active — at a glance.</div>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ═══════════════════════════════════════════
+     SCREENSHOTS
+════════════════════════════════════════════ -->
+  <!-- 
+  SCREENSHOT FOLDER INSTRUCTIONS:
+  Create a folder called "screenshots" next to your index.html.
+  Place these files inside:
+    • screenshots/hero.png        — main app window (schedule view)
+    • screenshots/screen-1.png   — schedules page
+    • screenshots/screen-2.png   — quick play page
+    • screenshots/screen-3.png   — settings / themes page
+    • screenshots/screen-4.png   — audio player / bell ringing
+  Recommended size: 1200×750px or wider
+-->
+  <section id="screenshots" style="max-width:100%; padding: 96px 0; overflow:hidden;">
+    <div
+      style="padding: 0 48px; margin-bottom: 52px; max-width: 1200px; margin-left: auto; margin-right: auto; padding-bottom: 0;">
+
+      <h2 class="section-title reveal reveal-delay-1">See it for yourself</h2>
+      <p class="section-sub reveal reveal-delay-2">Every pixel is intentional. Scroll through the gallery to explore
+        ChronoBell Pro's interface.</p>
+    </div>
+
+    <div class="gallery-fade" style="margin-top: 48px;">
+      <div class="gallery-wrap">
+        <div class="gallery-track" id="galleryTrack">
+        <div class="gallery-item">
+          <img src="screenshots/screen-1.png" alt="Schedules Page"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="img-label">Schedule Manager</div>
+        </div>
+        <div class="gallery-item">
+          <img src="screenshots/screen-2.png" alt="Quick Play"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="img-label">Quick Play Board</div>
+        </div>
+        <div class="gallery-item">
+          <img src="screenshots/screen-3.png" alt="Themes & Settings"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="img-label">Theme Selector</div>
+        </div>
+        <div class="gallery-item">
+          <img src="screenshots/screen-4.png" alt="Bell Playing"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="img-label">Bell in Action</div>
+        </div>
+        <div class="gallery-item">
+          <img src="screenshots/hero.png" alt="Overview"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="img-label">Full Overview</div>
+        </div>
+        <!-- Duplicate for JS infinite scroll -->
+        <div class="gallery-item">
+          <img src="screenshots/screen-1.png" alt="Schedules Page"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="img-label">Schedule Manager</div>
+        </div>
+        <div class="gallery-item">
+          <img src="screenshots/screen-2.png" alt="Quick Play"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="img-label">Quick Play Board</div>
+        </div>
+        <div class="gallery-item">
+          <img src="screenshots/screen-3.png" alt="Themes & Settings"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="img-label">Theme Selector</div>
+        </div>
+        <div class="gallery-item">
+          <img src="screenshots/screen-4.png" alt="Bell Playing"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="img-label">Bell in Action</div>
+        </div>
+        <div class="gallery-item">
+          <img src="screenshots/hero.png" alt="Overview"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="img-label">Full Overview</div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ═══════════════════════════════════════════
+     HOW IT WORKS
+════════════════════════════════════════════ -->
+  <section>
+
+    <h2 class="section-title reveal reveal-delay-1">Up and running in minutes</h2>
+
+    <div class="steps-grid">
+      <div class="step-connector"></div>
+      <div class="step reveal">
+        <div class="step-num">01</div>
+
+        <div class="step-title">Download</div>
+        <div class="step-desc">Download the installer for Windows, Mac, or Linux. Run it — done. No configuration files,
+          no terminal.</div>
+      </div>
+      <div class="step reveal reveal-delay-1">
+        <div class="step-num">02</div>
+
+        <div class="step-title">Add Your Audio</div>
+        <div class="step-desc">Browse to your bell sounds — MP3, WAV, OGG, or M4A. Pick any file on your computer.</div>
+      </div>
+      <div class="step reveal reveal-delay-2">
+        <div class="step-num">03</div>
+
+        <div class="step-title">Set Schedules</div>
+        <div class="step-desc">Create schedules with a time, label, and which days to ring. You can have unlimited
+          schedules.</div>
+      </div>
+      <div class="step reveal reveal-delay-3">
+        <div class="step-num">04</div>
+
+        <div class="step-title">Sit Back</div>
+        <div class="step-desc">ChronoBell runs in the background. Bells ring automatically, every day, on time.</div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ═══════════════════════════════════════════
+     THEMES
+════════════════════════════════════════════ -->
+  <section id="themes">
+    <h2 class="section-title reveal reveal-delay-1">10 Themes | One App.</h2>
+    <p class="section-sub reveal reveal-delay-2">Switch themes in one click. Each comes with its own particle system,
+      color palette, and glow effects — perfectly tuned for comfort and contrast.</p>
+
+    <div class="themes-grid">
+      <div class="theme-chip reveal" style="--chip-color:#5eead4;--chip-accent:linear-gradient(90deg,#5eead4,#38bdf8);"
+        data-theme-id="dark">
+        <div class="theme-chip-preview" style="background:linear-gradient(135deg,#0f1117,#1e2535);"><svg
+            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-moon-icon lucide-moon">
+            <path
+              d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" />
+          </svg></div>
+        <div class="theme-chip-name">Dark</div>
+      </div>
+      <div class="theme-chip reveal reveal-delay-1"
+        style="--chip-color:#4f46e5;--chip-accent:linear-gradient(90deg,#4f46e5,#0284c7);" data-theme-id="light">
+        <div class="theme-chip-preview" style="background:linear-gradient(135deg,#f8fafc,#e2e8f0);"><svg
+            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-sun-icon lucide-sun">
+            <circle cx="12" cy="12" r="4" />
+            <path d="M12 2v2" />
+            <path d="M12 20v2" />
+            <path d="m4.93 4.93 1.41 1.41" />
+            <path d="m17.66 17.66 1.41 1.41" />
+            <path d="M2 12h2" />
+            <path d="M20 12h2" />
+            <path d="m6.34 17.66-1.41 1.41" />
+            <path d="m19.07 4.93-1.41 1.41" />
+          </svg></div>
+        <div class="theme-chip-name">Light</div>
+      </div>
+      <div class="theme-chip reveal reveal-delay-2"
+        style="--chip-color:#fb923c;--chip-accent:linear-gradient(90deg,#fb923c,#fbbf24);" data-theme-id="fire">
+        <div class="theme-chip-preview" style="background:linear-gradient(135deg,#120a04,#2a1a08);"><svg
+            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-flame-icon lucide-flame">
+            <path d="M12 3q1 4 4 6.5t3 5.5a1 1 0 0 1-14 0 5 5 0 0 1 1-3 1 1 0 0 0 5 0c0-2-1.5-3-1.5-5q0-2 2.5-4" />
+          </svg></div>
+        <div class="theme-chip-name">Fire</div>
+      </div>
+      <div class="theme-chip reveal reveal-delay-3"
+        style="--chip-color:#86efac;--chip-accent:linear-gradient(90deg,#86efac,#bef264);" data-theme-id="earth">
+        <div class="theme-chip-preview" style="background:linear-gradient(135deg,#0d120a,#1e2618);"><svg
+            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-tree-deciduous-icon lucide-tree-deciduous">
+            <path
+              d="M8 19a4 4 0 0 1-2.24-7.32A3.5 3.5 0 0 1 9 6.03V6a3 3 0 1 1 6 0v.04a3.5 3.5 0 0 1 3.24 5.65A4 4 0 0 1 16 19Z" />
+            <path d="M12 19v3" />
+          </svg></div>
+        <div class="theme-chip-name">Earth</div>
+      </div>
+      <div class="theme-chip reveal reveal-delay-4"
+        style="--chip-color:#7dd3fc;--chip-accent:linear-gradient(90deg,#7dd3fc,#a5f3fc);" data-theme-id="frost">
+        <div class="theme-chip-preview" style="background:linear-gradient(135deg,#040e1a,#0e2338);"><svg
+            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-snowflake-icon lucide-snowflake">
+            <path d="m10 20-1.25-2.5L6 18" />
+            <path d="M10 4 8.75 6.5 6 6" />
+            <path d="m14 20 1.25-2.5L18 18" />
+            <path d="m14 4 1.25 2.5L18 6" />
+            <path d="m17 21-3-6h-4" />
+            <path d="m17 3-3 6 1.5 3" />
+            <path d="M2 12h6.5L10 9" />
+            <path d="m20 10-1.5 2 1.5 2" />
+            <path d="M22 12h-6.5L14 15" />
+            <path d="m4 10 1.5 2L4 14" />
+            <path d="m7 21 3-6-1.5-3" />
+            <path d="m7 3 3 6h4" />
+          </svg></div>
+        <div class="theme-chip-name">Frost</div>
+      </div>
+      <div class="theme-chip reveal" style="--chip-color:#34d399;--chip-accent:linear-gradient(90deg,#34d399,#22d3ee);"
+        data-theme-id="water">
+        <div class="theme-chip-preview" style="background:linear-gradient(135deg,#020f1c,#0a2640);"><svg
+            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-droplets-icon lucide-droplets">
+            <path
+              d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z" />
+            <path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97" />
+          </svg></div>
+        <div class="theme-chip-name">Water</div>
+      </div>
+      <div class="theme-chip reveal reveal-delay-1"
+        style="--chip-color:#c084fc;--chip-accent:linear-gradient(90deg,#c084fc,#818cf8);" data-theme-id="space">
+        <div class="theme-chip-preview" style="background:linear-gradient(135deg,#05020e,#130b24);"><svg
+            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-rocket-icon lucide-rocket">
+            <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
+            <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09" />
+            <path d="M9 12a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2z" />
+            <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 .05 5 .05" />
+          </svg></div>
+        <div class="theme-chip-name">Space</div>
+      </div>
+      <div class="theme-chip reveal reveal-delay-2"
+        style="--chip-color:#f0abfc;--chip-accent:linear-gradient(90deg,#f0abfc,#67e8f9);" data-theme-id="neon">
+        <div class="theme-chip-preview" style="background:linear-gradient(135deg,#07050c,#180e26);"><svg
+            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-sparkle-icon lucide-sparkle">
+            <path
+              d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z" />
+          </svg></div>
+        <div class="theme-chip-name">Neon</div>
+      </div>
+      <div class="theme-chip reveal reveal-delay-3"
+        style="--chip-color:#6ee7b7;--chip-accent:linear-gradient(90deg,#6ee7b7,#a3e635);" data-theme-id="forest">
+        <div class="theme-chip-preview" style="background:linear-gradient(135deg,#050e08,#122318);"><svg
+            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-trees-icon lucide-trees">
+            <path d="M10 10v.2A3 3 0 0 1 8.9 16H5a3 3 0 0 1-1-5.8V10a3 3 0 0 1 6 0Z" />
+            <path d="M7 16v6" />
+            <path d="M13 19v3" />
+            <path d="M12 19h8.3a1 1 0 0 0 .7-1.7L18 14h.3a1 1 0 0 0 .7-1.7L16 9h.2a1 1 0 0 0 .8-1.7L13 3l-1.4 1.5" />
+          </svg></div>
+        <div class="theme-chip-name">Forest</div>
+      </div>
+      <div class="theme-chip reveal reveal-delay-4"
+        style="--chip-color:#fca5a5;--chip-accent:linear-gradient(90deg,#fca5a5,#fdba74);" data-theme-id="sunset">
+        <div class="theme-chip-preview" style="background:linear-gradient(135deg,#120608,#281218);"><svg
+            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-sunset-icon lucide-sunset">
+            <path d="M12 10V2" />
+            <path d="m4.93 10.93 1.41 1.41" />
+            <path d="M2 18h2" />
+            <path d="M20 18h2" />
+            <path d="m19.07 10.93-1.41 1.41" />
+            <path d="M22 22H2" />
+            <path d="m16 6-4 4-4-4" />
+            <path d="M16 18a4 4 0 0 0-8 0" />
+          </svg></div>
+        <div class="theme-chip-name">Sunset</div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ═══════════════════════════════════════════
+     USE CASES
+════════════════════════════════════════════ -->
+  <section>
+
+    <h2 class="section-title reveal reveal-delay-1">Built for institutions that run on time</h2>
+
+    <div class="usecases-grid">
+      <div class="usecase-card reveal">
+        <span class="usecase-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-school-icon lucide-school">
+            <path d="M14 21v-3a2 2 0 0 0-4 0v3" />
+            <path d="M18 4.933V21" />
+            <path d="m4 6 7.106-3.79a2 2 0 0 1 1.788 0L20 6" />
+            <path
+              d="m6 11-3.52 2.147a1 1 0 0 0-.48.854V19a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5a1 1 0 0 0-.48-.853L18 11" />
+            <path d="M6 4.933V21" />
+            <circle cx="12" cy="9" r="2" />
+          </svg></span>
+        <div class="usecase-title">Schools & Colleges</div>
+        <div class="usecase-desc">Automate class start/end bells, recess, prayer times, and assembly announcements. One
+          computer, every bell — perfectly synchronized.</div>
+        <div class="usecase-quote">"We replaced the manual bell system entirely. Now the whole campus runs on time
+          without anyone lifting a finger."</div>
+      </div>
+      <div class="usecase-card reveal reveal-delay-1">
+        <span class="usecase-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+            viewBox="0 0 24 24">
+            <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
+            <path
+              d="m20,11c0,.55-.45,1-1,1h-.22l-1.57-6.26c1.05-.47,1.78-1.52,1.78-2.74v-1h-2v1c0,.55-.45,1-1,1h-1v-2h-2v2h-2v-2h-2v2h-1c-.55,0-1-.45-1-1v-1h-2v1c0,1.22.74,2.27,1.78,2.74l-1.57,6.26h-.22c-.55,0-1-.45-1-1v-1h-2v1c0,.88.39,1.67,1,2.22v7.78c0,.55.45,1,1,1h16c.55,0,1-.45,1-1v-7.78c.61-.55,1-1.34,1-2.22v-1h-2v1Zm-11.22-5h6.44l1.5,6H7.28l1.5-6Zm10.22,14h-4v-4h-6v4h-4v-6h14v6Z" />
+          </svg></span>
+        <div class="usecase-title">Temples & Religious Institutions</div>
+        <div class="usecase-desc">Schedule Bhajan, Arti, Chalisas, and daily routines with precision.
+          Supports any audio file including traditional bell and call recordings.</div>
+        <div class="usecase-quote">"The prayer schedule runs automatically every day. Students always know when to stop
+          and pray."</div>
+      </div>
+      <div class="usecase-card reveal reveal-delay-2">
+        <span class="usecase-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-building-icon lucide-building">
+            <path d="M12 10h.01" />
+            <path d="M12 14h.01" />
+            <path d="M12 6h.01" />
+            <path d="M16 10h.01" />
+            <path d="M16 14h.01" />
+            <path d="M16 6h.01" />
+            <path d="M8 10h.01" />
+            <path d="M8 14h.01" />
+            <path d="M8 6h.01" />
+            <path d="M9 22v-3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3" />
+            <rect x="4" y="2" width="16" height="20" rx="2" />
+          </svg></span>
+        <div class="usecase-title">Offices & Factories</div>
+        <div class="usecase-desc">Signal shift changes, break times, and end-of-day without manual intervention. The
+          Quick Play board is perfect for emergency announcements.</div>
+        <div class="usecase-quote">"We use the Quick Play board for fire drill sounds and lunch announcements. Dead
+          simple to use."</div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ═══════════════════════════════════════════
+     AUDIO FORMATS
+════════════════════════════════════════════ -->
+  <section>
+
+    <h2 class="section-title reveal reveal-delay-1">Any sound you want</h2>
+    <p class="section-sub reveal reveal-delay-2">ChronoBell Pro plays any standard audio format. Use your own
+      recordings, traditional bell sounds, or downloaded audio files.</p>
+
+    <div class="formats-row reveal reveal-delay-3">
+      <div class="format-chip">
+        <div class="fmt-dot"></div> MP3 <span
+          style="color:var(--faint);font-size:11px;margin-left:4px;">recommended</span>
+      </div>
+      <div class="format-chip">
+        <div class="fmt-dot"></div> WAV
+      </div>
+      <div class="format-chip">
+        <div class="fmt-dot"></div> OGG
+      </div>
+      <div class="format-chip">
+        <div class="fmt-dot"></div> M4A
+      </div>
+    </div>
+
+    <div
+      style="margin-top: 32px; background: var(--ink2); border: 1px solid var(--border); border-radius: 14px; padding: 24px 28px;"
+      class="reveal reveal-delay-4">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--teal);margin-bottom:8px;">// tip
+      </div>
+      <p style="font-size:14px;color:var(--muted);line-height:1.7;">Use <strong style="color:var(--text)">MP3</strong>
+        files for best compatibility across all platforms. Keep audio files in a dedicated folder (e.g. <code
+          style="background:rgba(255,255,255,.05);padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--sky)">C:\BellSounds\</code>)
+        so paths don't break if you move the app.</p>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ═══════════════════════════════════════════
+     DOWNLOAD
+════════════════════════════════════════════ -->
+  <section id="download">
+
+    <h2 class="section-title reveal reveal-delay-1">Get ChronoBell Pro</h2>
+    <p class="section-sub reveal reveal-delay-2">Free to download. No subscription. No account required. Works offline
+      from day one.</p>
+
+    <div class="platforms-grid">
+      <div class="platform-card reveal">
+        <span class="platform-os">
+          <svg viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Windows 11 four-pane logo -->
+            <rect x="4" y="4" width="38" height="38" rx="6" fill="#00adef" />
+            <rect x="46" y="4" width="38" height="38" rx="6" fill="#00adef" />
+            <rect x="4" y="46" width="38" height="38" rx="6" fill="#00adef" />
+            <rect x="46" y="46" width="38" height="38" rx="6" fill="#00adef" />
+          </svg>
+        </span>
+        <div class="platform-name">Windows</div>
+        <div class="platform-version">v1.0.0 · NSIS Installer</div>
+        <div class="platform-spec">Windows 10 / 11<br>x64 · 64-bit required<br></div>
+        <button class="btn-download"
+          onclick="handleDownload('windows', 'https://archive.org/download/chrono-bell-pro-setup-1.0.0/ChronoBell-Pro-Setup-1.0.0.exe')">⬇
+          Download .exe</button>
+      </div>
+
+      <div class="platform-card reveal reveal-delay-1">
+        <span class="platform-os">
+          <img src="assets/images/macos.png" alt="macOS"
+            style="width:72px;height:72px;object-fit:contain;filter:brightness(0) invert(1);opacity:0.88;">
+        </span>
+        <div class="platform-name">macOS</div>
+        <div class="platform-version">v1.0.0 · DMG Universal</div>
+        <div class="platform-spec">macOS 11+ (Big Sur)<br>Intel & Apple Silicon<br></div>
+        <button class="btn-download"
+          onclick="handleDownload('mac', 'https://www.mediafire.com/file/duejjm5nvrmjiip/ChronoBell-Pro-1.0.0.dmg/file')">⬇
+          Download .dmg</button>
+      </div>
+
+      <div class="platform-card reveal reveal-delay-2">
+        <span class="platform-os">
+          <img src="assets/images/macos.png" alt="Linux" style="width:72px;height:72px;object-fit:contain;">
+        </span>
+        <div class="platform-name">Linux</div>
+        <div class="platform-version">v1.0.0 · AppImage</div>
+        <div class="platform-spec">Ubuntu, Fedora, Arch<br>ARM64 & x86_64<br></div>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <button class="btn-download"
+            onclick="handleDownload('linux-arm', 'https://www.mediafire.com/file/av3taj9u4k0yazh/ChronoBell-Pro-1.0.0-arm64.AppImage/file')">⬇
+            Download ARM64 (Apple M / Pi)</button>
+          <button class="btn-download"
+            onclick="handleDownload('linux-x86', 'https://www.mediafire.com/file/joqex42vsrkbwp0/ChronoBell-Pro-1.0.0-x86_64.AppImage/file')">⬇
+            Download x86_64 (Intel / AMD)</button>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:24px;text-align:center;font-size:13px;color:var(--faint);" class="reveal">
+      Contact us for enterprise licensing, source code, or custom builds.
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ═══════════════════════════════════════════
+     FAQ
+════════════════════════════════════════════ -->
+  <section id="faq">
+
+    <h2 class="section-title reveal reveal-delay-1">Common questions</h2>
+
+    <div class="faq-list reveal reveal-delay-2">
+
+      <div class="faq-item">
+        <button class="faq-q">
+          Does ChronoBell work without internet? <span class="faq-arrow">+</span>
+        </button>
+        <div class="faq-a">Yes — 99% offline. All schedules, quick play buttons, and settings are stored in a local
+          SQLite database. No internet connection is required at this point. Just require internet connection for Login
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          How many schedules can I create? <span class="faq-arrow">+</span>
+        </button>
+        <div class="faq-a">Unlimited. You can create as many schedules as your institution needs — one for every period,
+          every prayer, every break. The system handles all of them simultaneously without any performance issues.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          What audio formats are supported? <span class="faq-arrow">+</span>
+        </button>
+        <div class="faq-a">ChronoBell Pro supports MP3, WAV, OGG, and M4A formats. We recommend MP3 for best
+          compatibility. You can use any audio file stored on your computer — there's no need to upload anything to a
+          server.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          Will it keep running if I close the window? <span class="faq-arrow">+</span>
+        </button>
+        <div class="faq-a">Yes. Enable "Minimize to Tray" in Settings and ChronoBell will continue running in the system
+          tray. Bells will ring on schedule even when the main window is closed. It stops only if you explicitly quit
+          from the tray icon.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          Can I use ChronoBell on multiple computers? <span class="faq-arrow">+</span>
+        </button>
+        <div class="faq-a">No. You can't install ChronoBell Pro on any number of computers. Each installation is need
+          different login credentials, as 1 login credential is for 1 device only.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          Is ChronoBell Pro free? <span class="faq-arrow">+</span>
+        </button>
+        <div class="faq-a">No, The Software is paid with Yearly Subsription - ₹5499/Year or $58/Year.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          What happens if the computer restarts? <span class="faq-arrow">+</span>
+        </button>
+        <div class="faq-a">Enable "Auto Start" in Settings and ChronoBell will launch automatically when Windows or
+          macOS starts up. Your schedules will resume immediately — no manual intervention needed.</div>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ═══════════════════════════════════════════
+     CONTACT
+════════════════════════════════════════════ -->
+  <section id="contact">
+
+    <h2 class="section-title reveal reveal-delay-1">Get in touch</h2>
+    <p class="section-sub reveal reveal-delay-2" style="margin-bottom: 48px;">Questions, support, custom builds, or
+      enterprise licensing — we're here to help.</p>
+
+    <div class="contact-info reveal"
+      style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;max-width:900px;">
+
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=yashvardhantechno@gmail.com" class="contact-method">
+        <div class="contact-method-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" class="lucide lucide-mail-icon lucide-mail">
+            <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
+            <rect x="2" y="4" width="20" height="16" rx="2" />
+          </svg></div>
+        <div>
+          <div class="contact-method-label">Email</div>
+          <div class="contact-method-value">yashvardhantechno@gmail.com</div>
+        </div>
+      </a>
+
+      <a href="https://wa.me/918923905505" class="contact-method" target="_blank">
+        <div class="contact-method-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" class="lucide lucide-message-square-more-icon lucide-message-square-more">
+            <path
+              d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z" />
+            <path d="M12 11h.01" />
+            <path d="M16 11h.01" />
+            <path d="M8 11h.01" />
+          </svg></div>
+        <div>
+          <div class="contact-method-label">WhatsApp</div>
+          <div class="contact-method-value">+91 89239 05505</div>
+        </div>
+      </a>
+
+      <a href="tel:+918923905505" class="contact-method">
+        <div class="contact-method-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" class="lucide lucide-message-square-more-icon lucide-message-square-more">
+            <path
+              d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z" />
+            <path d="M12 11h.01" />
+            <path d="M16 11h.01" />
+            <path d="M8 11h.01" />
+          </svg></div>
+        <div>
+          <div class="contact-method-label">Phone / Call</div>
+          <div class="contact-method-value">+91 89239 05505</div>
+        </div>
+      </a>
+
+      <div class="contact-method" style="cursor:default;">
+        <div class="contact-method-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" class="lucide lucide-clock4-icon lucide-clock-4">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M12 6v6l4 2" />
+          </svg></div>
+        <div>
+          <div class="contact-method-label">Support Hours</div>
+          <div class="contact-method-value">Mon–Sun, 9 AM – 8 PM IST</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+     CTA BANNER
+════════════════════════════════════════════ -->
+  <div class="cta-banner reveal">
+    <h2>Ready to automate your bells?</h2>
+    <p>Join schools and institutions that run on time — every day, automatically.</p>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+      <a href="#download" class="btn-primary">⬇ Download ChronoBell Pro</a>
+      <a href="#contact" class="btn-outline">Contact for Enterprise</a>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════ -->
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <a href="#" class="footer-logo">
+          <div class="footer-logo-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" class="lucide lucide-bell-ring-icon lucide-bell-ring">
+              <path d="M10.268 21a2 2 0 0 0 3.464 0" />
+              <path d="M22 8c0-2.3-.8-4.3-2-6" />
+              <path
+                d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326" />
+              <path d="M4 2C2.8 3.7 2 5.7 2 8" />
+            </svg></div>
+          <span class="footer-logo-text">ChronoBell Pro</span>
+        </a>
+        <div class="footer-mono" style="margin-top:8px;">v1.0.0 · Professional Bell Scheduling System</div>
+      </div>
+
+      <div class="footer-links">
+        <a href="#features">Features</a>
+        <a href="#screenshots">Screenshots</a>
+        <a href="#themes">Themes</a>
+        <a href="#download">Download</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div style="text-align:right;">
+        <div class="footer-copy">© 2025 ChronoBell Pro. All rights reserved.</div>
+        <div class="footer-mono">Built By Yashvardhan</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════
+     SCRIPTS
+════════════════════════════════════════════ -->
+  <script src="assets/js/script.js"></script>
+</body>
+
+</html>

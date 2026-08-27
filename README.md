@@ -13,7 +13,7 @@
 
 | Platform | Link |
 |---|---|
-| 🪟 **Windows** | [ChronoBell-Pro-Setup-1.0.0.exe](https://www.mediafire.com/file/o1z9kixbvyv07e2/ChronoBell-Pro-Setup-1.0.0.exe/file) |
+| 🪟 **Windows** | [ChronoBell-Pro-Setup-1.0.0.exe](https://archive.org/download/chrono-bell-pro-setup-1.0.0/ChronoBell-Pro-Setup-1.0.0.exe) |
 | 🍎 **macOS** (Intel) | [ChronoBell-Pro-1.0.0.dmg](https://www.mediafire.com/file/duejjm5nvrmjiip/ChronoBell-Pro-1.0.0.dmg/file) |
 | 🐧 **Linux** (x86_64) | [ChronoBell-Pro-1.0.0-x86_64.AppImage](https://www.mediafire.com/file/joqex42vsrkbwp0/ChronoBell-Pro-1.0.0-x86_64.AppImage/file) |
 | 🐧 **Linux** (arm64) | [ChronoBell-Pro-1.0.0-arm64.AppImage](https://www.mediafire.com/file/av3taj9u4k0yazh/ChronoBell-Pro-1.0.0-arm64.AppImage/file) |
